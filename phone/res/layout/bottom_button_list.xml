@@ -1,0 +1,59 @@
+<RelativeLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  android:layout_width="match_parent"
+  android:layout_height="wrap_content"
+  android:background="@drawable/filter_nav_bg">
+  
+    <RadioGroup 
+        android:id="@+id/mood_list"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        
+        <RadioButton 
+            android:id="@+id/happy_button"
+        	android:layout_width="wrap_content"
+        	android:layout_height="wrap_content"
+        	android:button="@null"
+            android:background="@drawable/btn_selector_happy"/>
+        
+        <RadioButton 
+            android:id="@+id/blue_button"
+        	android:layout_width="wrap_content"
+        	android:layout_height="wrap_content"
+        	android:button="@null"
+        	android:background="@drawable/btn_selector_blue"/>
+        
+        <RadioButton 
+            android:id="@+id/angry_button"
+        	android:layout_width="wrap_content"
+        	android:layout_height="wrap_content"
+        	android:button="@null"
+        	android:background="@drawable/btn_selector_angry"/>
+        
+        
+        <RadioButton 
+            android:id="@+id/sick_button"
+        	android:layout_width="wrap_content"
+        	android:layout_height="wrap_content"
+        	android:button="@null"
+        	android:background="@drawable/btn_selector_sick"/>
+        
+    </RadioGroup>
+
+    
+    <Button
+        android:id="@+id/upload_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_alignParentRight="true"
+        android:background="@drawable/btn_selector_black"
+        android:text="@string/upload"
+        android:textColor="@android:color/white"
+        android:padding="5dp"
+        android:textSize="15sp" />
+    
+</RelativeLayout>
+
+

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    
+    <PreferenceCategory
+	    android:key="functions"
+	    android:title="功能">"
+		<PreferenceScreen
+	        android:key="snapshot"
+	        android:title="拍照上传">
+	        <intent
+	            android:targetPackage="com.my365day"
+	            android:targetClass="com.my365day.ui.UploadActivity" />
+	    </PreferenceScreen>
+	</PreferenceCategory>
+
+    <PreferenceCategory
+	    android:key="settings"
+	    android:title="设置">
+		
+        <CheckBoxPreference 
+            android:key="alarm_enable"
+		    android:title="设置提醒"
+		    android:summary="定时在通知栏上提醒，防止错过"/>
+        
+		<com.my365day.TimePreference 
+	        android:key="alarm_time"
+	        android:title="时间设置"
+	        android:summary="设置提醒的时间"
+	        android:dependency="alarm_enable"
+	        android:defaultValue="0"/>
+
+	    <EditTextPreference 
+	        android:key="auth_code"
+	        android:persistent="true"
+	        android:dialogMessage="请输入与服务器上一致的认证码。"
+	        android:title="认证码设置"
+	        android:summary="与服务器匹配才能成功上传图片"/>
+	    
+	    <Preference 
+	        android:key="about"
+	        android:title="关于"/>
+	    
+    </PreferenceCategory>
+
+</PreferenceScreen>

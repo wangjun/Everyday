@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <dimen name="custom_titlebar_height">41dip</dimen>
+    <dimen name="ico_width">139dp</dimen>
+    <dimen name="ico_height">136dp</dimen>
+    <dimen name="text_size_normal">26dp</dimen>
+    <dimen name="text_size_big">40dp</dimen>
+
+    <!-- Dialog -->
+    <dimen name="dialog_width">483dip</dimen>
+    <dimen name="dialog_height">286dip</dimen>
+    <dimen name="list_head_height">48dip</dimen>
+    <dimen name="list_item_height">48dip</dimen>
+
+    <!-- Font Size -->
+    <dimen name="font_size_small0">10sp</dimen>
+    <dimen name="font_size_small">14sp</dimen>
+    <dimen name="font_size_medium">20sp</dimen>
+    <dimen name="font_size_large">26sp</dimen>
+    <dimen name="font_size_large1">30sp</dimen>
+    <dimen name="button_width">52dp</dimen>
+    <dimen name="button_height">52dp</dimen>
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+
+</resources>
