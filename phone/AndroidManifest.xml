@@ -36,7 +36,13 @@
         <activity
             android:name="com.my365day.ui.MainActivity"
             android:screenOrientation="portrait" >
-        </activity>    
+        </activity>
+        
+        <receiver android:name=".NotificationReceiver">
+        	<intent-filter> 
+        		
+    		</intent-filter> 
+        </receiver>
         
      </application>
 

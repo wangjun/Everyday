@@ -15,7 +15,7 @@ import android.widget.TimePicker;
 public class TimePreference extends DialogPreference {
     private Calendar calendar;
     private TimePicker picker = null;
-
+    
     public TimePreference(Context ctxt) {
         this(ctxt, null);
     }
@@ -26,15 +26,15 @@ public class TimePreference extends DialogPreference {
 
     public TimePreference(Context ctxt, AttributeSet attrs, int defStyle) {
         super(ctxt, attrs, defStyle);
-
-        setPositiveButtonText("set");
-        setNegativeButtonText("cancel");
+        setPositiveButtonText(ctxt.getString(R.string.yes));
+        setNegativeButtonText(ctxt.getString(R.string.cancel));
         calendar = new GregorianCalendar();
     }
 
     @Override
     protected View onCreateDialogView() {
         picker = new TimePicker(getContext());
+        picker.setIs24HourView(true);
         return (picker);
     }
 
@@ -87,9 +87,13 @@ public class TimePreference extends DialogPreference {
 
     @Override
     public CharSequence getSummary() {
-        if (calendar == null || calendar.getTimeInMillis()==0) {
+        if (calendar == null) {
             return null;
         }
         return DateFormat.getTimeFormat(getContext()).format(new Date(calendar.getTimeInMillis()));
+    }
+    
+    public Calendar getCalendar(){
+        return calendar;
     }
 }
