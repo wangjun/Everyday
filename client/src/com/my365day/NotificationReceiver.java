@@ -23,7 +23,7 @@ public class NotificationReceiver extends BroadcastReceiver {
         PendingIntent pendingIntent = PendingIntent.getActivity(context, 1, playIntent, PendingIntent.FLAG_UPDATE_CURRENT);
         NotificationCompat.Builder builder = new NotificationCompat.Builder(context);
         builder.setContentTitle("Everyday")
-            .setContentText("≈ƒ’’¿≤")
+            .setContentText(context.getResources().getString(R.string.time_to_photograph))
             .setSmallIcon(R.drawable.ic_launcher)
             .setDefaults(Notification.DEFAULT_ALL)
             .setContentIntent(pendingIntent)
