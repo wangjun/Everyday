@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>图片上传</title>
+  </head>
+  
+  <body>
+	  <form action="/image/upload" method="POST" enctype="multipart/form-data">
+	  	{% csrf_token %}
+	    {% for field in form %}
+	      <div class="fieldWrapper">
+	         {{ field.label_tag }}{{ field }} 
+	         {{ field.errors }}
+	      </div>
+	    {% endfor %}
+	    <div class="fieldWrapper"><p><input type="submit" value="上传" /></p></div>
+	  </form>
+  </body>
+</html>

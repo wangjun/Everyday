@@ -20,6 +20,7 @@ public class WelcomeActivity extends Activity {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.layout_welcome_activity);
+        
 		loginThread.start();
 	}
 	
@@ -27,7 +28,7 @@ public class WelcomeActivity extends Activity {
 		@Override
 		public void run() {
 			try {
-				Thread.sleep(2000);
+				Thread.sleep(1000);
 			} catch (InterruptedException e) {
 				e.printStackTrace();
 			}
@@ -39,6 +40,9 @@ public class WelcomeActivity extends Activity {
 		@Override
 		public void handleMessage(Message msg) {
 			super.handleMessage(msg);
+			finish();
+		    overridePendingTransition(R.anim.activity_in,R.anim.activity_exit);
+		    
 			Intent intent = new Intent(WelcomeActivity.this,MainActivity.class);
 			startActivity(intent);
 		}
@@ -47,7 +51,7 @@ public class WelcomeActivity extends Activity {
 	@Override
 	protected void onStop() {
 		super.onStop();
-		finish();
+
 	}
 	
 }

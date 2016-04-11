@@ -24,7 +24,7 @@ public class NotificationReceiver extends BroadcastReceiver {
         NotificationCompat.Builder builder = new NotificationCompat.Builder(context);
         builder.setContentTitle("Everyday")
             .setContentText(context.getResources().getString(R.string.time_to_photograph))
-            .setSmallIcon(R.drawable.ic_launcher)
+            .setSmallIcon(R.drawable.heart)
             .setDefaults(Notification.DEFAULT_ALL)
             .setContentIntent(pendingIntent)
             .setAutoCancel(true);
